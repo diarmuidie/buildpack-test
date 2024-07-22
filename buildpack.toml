@@ -1,0 +1,11 @@
+api = "0.10"
+
+[buildpack]
+id = "samples/hello-world"
+version = "0.0.1"
+
+[[stacks]]
+id = "*"
+
+[[targets]]
+os = "linux"

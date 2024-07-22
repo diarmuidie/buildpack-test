@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -eo pipefail
+
+
+echo "==== analyzed.toml before modification: ===="
+cat /layers/analyzed.toml
+echo "===="
+
+# Replace the analysed.toml file to change the run image
+echo '[run-image]
+  reference = "private-image"' > /layers/analyzed.toml
+
+echo ""
+echo "==== analyzed.toml after modification: ===="
+cat /layers/analyzed.toml
+echo "===="
